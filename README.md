@@ -1,2 +1,2 @@
-# GuujiBot
- 
+# Guuji Discord Bot
+ deez nuts
