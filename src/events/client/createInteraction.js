@@ -1,21 +1,23 @@
 module.exports = {
-    name: 'createInteraction',
-    async execute(interaction, client) {
-        if (interaction.isChatInputCommand()) {
-            const { commands } = client;
-            const { commandName } = interaction;
-            const command = commands.get(commandName);
-            if (!command) return;
+    name: 'interactionCreate',
+    async execute(interaction) {
+        if (!interaction.isChatInputCommand()) return;
 
-            try {
-                await command.execute(interaction, client);
-            } catch (error) {
-                console.error(error);
-                await interaction.reply({
-                    content: `Something went wrong while executing this command.`,
-                    ephemeral: true
-                });
-            }
+        const command = interaction.client.commands.get(interaction.commandName);
+
+        if (!command) {
+            console.error(`No command matching ${interaction.commandName} was found.`);
+            return;
+        }
+
+        try {
+            await command.execute(interaction);
+        } catch (error) {
+            console.error(error);
+            await interaction.reply({
+                content: `Something went wrong while executing this command.`,
+                ephemeral: true
+            });
         }
     }
 }

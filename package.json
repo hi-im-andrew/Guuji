@@ -2,6 +2,9 @@
   "name": "Guuji",
   "version": "1.0.0",
   "main": "src/bot.js",
+  "scripts": {
+    "start": "node ."
+  },
   "license": "MIT",
   "devDependencies": {
     "eslint": "^8.27.0"
@@ -11,7 +14,8 @@
     "chalk": "4.1.2",
     "discord-api-types": "^0.37.18",
     "discord.js": "^14.6.0",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "image-url-validator": "^1.0.4"
   },
   "description": "yes",
   "repository": "https://github.com/hi-im-andrew/Guuji.git",

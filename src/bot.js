@@ -1,14 +1,12 @@
-const { Client, Collection, GatewayIntentBits, Partials } = require('discord.js');
+const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const fs = require('fs');
 
 require('dotenv').config();
 
 const client = new Client({
     intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMessages,
-    ],
-    partials: []
+        GatewayIntentBits.Guilds
+    ]
 });
 
 client.commands = new Collection();
@@ -24,6 +22,6 @@ for (const folder of functionFolders) {
     }
 }
 
-client.handleCommands();
 client.handleEvents();
+client.handleCommands();
 client.login(process.env.DISCORD_TOKEN);
