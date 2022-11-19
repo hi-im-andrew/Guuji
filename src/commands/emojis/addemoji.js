@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, Guild } = require('discord.js');
+const { SlashCommandBuilder } = require('discord.js');
 const isImageURL = require('image-url-validator').default;
 
 module.exports = {
