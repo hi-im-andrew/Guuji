@@ -1,2 +1,2 @@
 # Guuji Discord Bot
- deez nuts
+WIP
