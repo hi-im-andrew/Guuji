@@ -20,5 +20,6 @@
   "description": "yes",
   "repository": "https://github.com/hi-im-andrew/Guuji.git",
   "author": "Andrew Le",
-  "private": true
+  "private": true,
+  "packageManager": "yarn@3.5.1"
 }
